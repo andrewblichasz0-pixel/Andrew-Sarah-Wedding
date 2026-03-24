@@ -6,7 +6,12 @@
 <title>Our Story - Andrew & Sarah</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:'Lora',serif;background:#fffaf9;color:#4a3f3f;}
+body{
+  margin:0;
+  font-family:'Lora',serif;
+  background:#fffaf9;
+  color:#4a3f3f;
+}
 
 /* UPDATED HEADER */
 header{
@@ -91,24 +96,23 @@ header{
   display:block;
 }
 
-/* ✅ MOBILE FIX */
+/* MOBILE FIX: image fully visible, no cutoff */
 @media(max-width:768px){
   .container{
     flex-direction:column;
   }
 
   .image-strip{
-    order:-1;        /* move image to top */
+    order:-1;       /* move image to top */
     width:100%;
-    height:auto;     /* remove forced height */
+    height:auto;
     margin-bottom:15px;
   }
 
   .image-strip img{
     width:100%;
-    height:auto;     /* maintain aspect ratio */
-    max-height:400px;
-    object-fit:contain; /* prevent cropping */
+    height:auto;     /* natural aspect ratio */
+    object-fit:unset; /* removes cropping */
     border-radius:12px;
   }
 }
@@ -151,7 +155,5 @@ function toggleMenu(){
 }
 </script>
 
-</body>
-</html>
 </body>
 </html>
