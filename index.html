@@ -6,17 +6,72 @@
 <title>Andrew & Sarah Wedding</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lora&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:'Lora',serif;background:#fffaf9;color:#4a3f3f;}
-h1{font-size:3rem;margin-bottom:10px;}
-header{display:flex;justify-content:center;gap:40px;padding:20px;background:white;border-bottom:1px solid #eee;position:sticky;top:0;z-index:10;}
-header a{text-decoration:none;color:#b76e79;font-weight:bold;transition:0.3s;}
-header a:hover{color:#9e5d66;}
-.hero{text-align:center;padding:33px 20px 17px;}
-.hero p{color:#7a6a6a;font-size:1.2rem;margin:5px 0;}
-.countdown{margin-top:5px;font-size:1.5rem;color:#b76e79;} /* Reduced margin here */
-.slideshow{max-width:1100px; margin:60px auto;position:relative;}
-.slide{position:absolute;width:100%;height:650px;object-fit:cover;object-position:center 30%;border-radius:12px;opacity:0;animation:fade 110s infinite;}
-@keyframes fade{0%{opacity:0;}5%{opacity:1;}20%{opacity:1;}25%{opacity:0;}100%{opacity:0;}}
+body{
+  margin:0;
+  font-family:'Lora',serif;
+  background:#fffaf9;
+  color:#4a3f3f;
+}
+h1{
+  font-size:3rem;
+  margin-bottom:10px;
+}
+header{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:20px;
+  background:white;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+header a{
+  text-decoration:none;
+  color:#b76e79;
+  font-weight:bold;
+  transition:0.3s;
+}
+header a:hover{
+  color:#9e5d66;
+}
+.hero{
+  text-align:center;
+  padding:33px 20px 17px;
+}
+.hero p{
+  color:#7a6a6a;
+  font-size:1.2rem;
+  margin:5px 0;
+}
+.countdown{
+  margin-top:20px;
+  font-size:1.5rem;
+  color:#b76e79;
+}
+.slideshow{
+  max-width:1100px;
+  margin:52px auto; /* moved up 8px from previous 60px */
+  position:relative;
+}
+.slide{
+  position:absolute;
+  width:100%;
+  height:650px;
+  object-fit:cover;
+  object-position:center 30%;
+  border-radius:12px;
+  opacity:0;
+  animation:fade 140s infinite;
+}
+@keyframes fade{
+  0%{opacity:0;}
+  5%{opacity:1;}
+  20%{opacity:1;}
+  25%{opacity:0;}
+  100%{opacity:0;}
+}
 .slide:nth-child(1){animation-delay:0s;}
 .slide:nth-child(2){animation-delay:10s;}
 .slide:nth-child(3){animation-delay:20s;}
@@ -29,7 +84,9 @@ header a:hover{color:#9e5d66;}
 .slide:nth-child(10){animation-delay:90s;}
 .slide:nth-child(11){animation-delay:100s;}
 .slide:nth-child(12){animation-delay:110s;}
-@media(max-width:768px){.slide{height:400px;}}
+@media(max-width:768px){
+  .slide{height:400px;}
+}
 </style>
 </head>
 <body>
@@ -49,6 +106,7 @@ header a:hover{color:#9e5d66;}
   <p>Ceremony at 5:00 PM</p>
   <div class="countdown" id="countdown"></div>
 </div>
+
 <div class="slideshow">
   <img class="slide" src="IMG_0122.jpeg">
   <img class="slide" src="IMG_0702.jpeg">
