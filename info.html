@@ -4,78 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Additional Info - Andrew & Sarah</title>
-<!-- Lora font -->
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 <style>
-body {
-  margin: 0;
-  font-family: 'Lora', serif;
-  background: #fffaf9;
-  color: #4a3f3f;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 20px;
-  background: white;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-header a {
-  text-decoration: none;
-  color: #b76e79;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-header a:hover {
-  color: #9e5d66;
-}
-
-section {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  text-align: center;
-}
-
-h1, h2 {
-  font-family: 'Lora', serif;
-  color: #b76e79;
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-iframe {
-  width: 100%;
-  height: 300px;
-  border: none;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.theme-image {
-  width: 100%;
-  border-radius: 12px;
-  margin-top: 20px;
-}
-
-.attire-note {
-  font-style: italic;
-  color: #7a5b5b;
-  margin-top: 10px;
-}
+body { margin:0; font-family:'Lora', serif; background:#fffaf9; color:#4a3f3f; }
+header { display:flex; justify-content:center; gap:40px; padding:20px; background:white; border-bottom:1px solid #eee; position:sticky; top:0; z-index:10; }
+header a { text-decoration:none; color:#b76e79; font-weight:bold; transition:0.3s; }
+header a:hover { color:#9e5d66; }
+section { max-width:700px; margin:40px auto; padding:20px; text-align:center; }
+h1,h2 { color:#b76e79; margin:10px 0; }
+p { font-size:1.1rem; margin:10px 0; }
+iframe { width:100%; height:300px; border:none; border-radius:10px; margin-top:10px; }
+img { width:100%; border-radius:12px; margin-top:10px; }
 </style>
 </head>
 <body>
@@ -90,18 +29,20 @@ iframe {
 </header>
 
 <section>
-  <h1>Additional Information</h1>
+  <h1>Theme</h1>
+  <h2>Sunset Floral</h2>
+  <p>Please try to wear attire that matches our theme!</p>
+  <img src="IMG_9999.jpeg" alt="Sunset Floral Theme">
 
-  <h2>Theme</h2>
-  <p>Sunset Floral</p>
-  <img src="IMG_9999.jpg" alt="Sunset Floral Theme" class="theme-image">
-  <p class="attire-note">We encourage guests to wear attire that complements the sunset floral theme.</p>
-
-  <h2>Venue & Directions</h2>
+  <h1>Venue & Directions</h1>
   <p>Ceremony and reception will be held at:</p>
   <p>7627 W Courtney Campbell Cswy, Tampa, FL</p>
-
-  <iframe src="https://maps.google.com/maps?q=7627%20W%20Courtney%20Campbell%20Cswy,%20Tampa,%20FL&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+  <iframe 
+    src="https://maps.google.com/maps?q=7627%20W%20Courtney%20Campbell%20Cswy,%20Tampa,%20FL&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+    allowfullscreen></iframe>
+</section>
+</body>
+</html>
 </section>
 </body>
 </html>
