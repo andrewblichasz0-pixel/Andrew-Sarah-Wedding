@@ -9,32 +9,66 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Lora', serif; /* changed to Lora */
+  font-family: 'Lora', serif;
   background: #fffaf9;
   color: #4a3f3f;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 20px;
-  background: white;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+/* UPDATED HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:white;
+  padding:10px;
+  border-bottom:1px solid #eee;
 }
 
-header a {
-  text-decoration: none;
-  color: #b76e79;
-  font-weight: bold;
-  transition: 0.3s;
+/* dropdown button */
+.menu-btn{
+  background:#b76e79;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  font-size:16px;
+  cursor:pointer;
+  border-radius:6px;
 }
 
-header a:hover {
-  color: #9e5d66;
+/* dropdown container */
+.dropdown{
+  position:relative;
+  display:inline-block;
+}
+
+/* dropdown content */
+.dropdown-content{
+  display:none;
+  position:absolute;
+  top:45px;
+  left:0;
+  background:white;
+  min-width:160px;
+  box-shadow:0 8px 16px rgba(0,0,0,0.1);
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.dropdown-content a{
+  display:block;
+  padding:10px;
+  text-decoration:none;
+  color:#b76e79;
+  font-weight:bold;
+}
+
+.dropdown-content a:hover{
+  background:#f8eeee;
+}
+
+/* show dropdown */
+.show{
+  display:block;
 }
 
 section {
@@ -45,7 +79,7 @@ section {
 }
 
 h1, h2 {
-  font-family: 'Lora', serif; /* changed to Lora */
+  font-family: 'Lora', serif;
   color: #b76e79;
   margin-top: 0;
   margin-bottom: 16px;
@@ -59,19 +93,33 @@ p {
 </style>
 </head>
 <body>
+
 <header>
-  <a href="index.html">Home</a>
-  <a href="ourstory.html">Our Story</a>
-  <a href="rsvp.html">RSVP</a>
-  <a href="hotel.html">Hotel Block</a>
-  <a href="schedule.html">Schedule</a>
-  <a href="registry.html">Registry</a>
-  <a href="info.html">Info</a>
+  <div class="dropdown">
+    <button class="menu-btn" onclick="toggleMenu()">Menu ☰</button>
+    <div id="menu" class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="ourstory.html">Our Story</a>
+      <a href="rsvp.html">RSVP</a>
+      <a href="hotel.html">Hotel Block</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="registry.html">Registry</a>
+      <a href="info.html">Info</a>
+    </div>
+  </div>
 </header>
+
 <section>
   <h1>Hotel Block</h1>
   <h2>Stay near the venue</h2>
   <p>We have reserved a block of rooms for a discounted rate at The Westin Tampa Bay Hotel for our guests. If you are interested in this, please contact Andrew at (813)-335-2474.</p>
 </section>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
