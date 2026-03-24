@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Andrew & Sarah Wedding</title>
+
+<!-- Elegant fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background: #fffaf9;
+  color: #4a3f3f;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header a {
+  text-decoration: none;
+  color: #b76e79;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header a:hover {
+  color: #9e5d66;
+}
+
+.hero {
+  text-align: center;
+  padding: 20px 20px 8px;
+}
+
+.hero p {
+  margin: 2px 0;
+  font-size: 1.2rem;
+}
+
+.countdown {
+  margin: 8px 0 0 0;
+  font-size: 1.5rem;
+  color: #b76e79;
+}
+
+.slideshow {
+  max-width: 1100px;
+  margin: 10px auto 30px;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 605px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 12px;
+  opacity: 0;
+  animation: fade 120s infinite;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  20% { opacity: 1; }
+  25% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Animation delays for 12 images */
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 10s; }
+.slide:nth-child(3) { animation-delay: 20s; }
+.slide:nth-child(4) { animation-delay: 30s; }
+.slide:nth-child(5) { animation-delay: 40s; }
+.slide:nth-child(6) { animation-delay: 50s; }
+.slide:nth-child(7) { animation-delay: 60s; }
+.slide:nth-child(8) { animation-delay: 70s; }
+.slide:nth-child(9) { animation-delay: 80s; }
+.slide:nth-child(10) { animation-delay: 90s; }
+.slide:nth-child(11) { animation-delay: 100s; }
+.slide:nth-child(12) { animation-delay: 110s; }
+
+@media (max-width: 768px) {
+  .slide { height: 350px; }
+  h1 { font-size: 2.2rem; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">Home</a>
+  <a href="ourstory.html">Our Story</a>
+  <a href="rsvp.html">RSVP</a>
+  <a href="hotel.html">Hotel Block</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="registry.html">Registry</a>
+  <a href="info.html">Info</a>
+</header>
+
+<div class="hero">
+  <h1>We're Getting Married!</h1>
+  <p>October 17, 2026 • Tampa, Florida</p>
+  <p>Ceremony at 6:00 PM</p>
+  <div class="countdown" id="countdown"></div>
+</div>
+
+<div class="slideshow">
+  <img class="slide" src="images/IMG_0122.JPEG" />
+  <img class="slide" src="images/IMG_0702.JPEG" />
+  <img class="slide" src="images/IMG_2148.JPEG" />
+  <img class="slide" src="images/IMG_3051.JPEG" />
+  <img class="slide" src="images/IMG_3810.JPEG" />
+  <img class="slide" src="images/IMG_3835.JPEG" />
+  <img class="slide" src="images/IMG_4259.JPEG" />
+  <img class="slide" src="images/IMG_9302.JPEG" />
+  <img class="slide" src="images/IMG_9365.JPEG" />
+  <img class="slide" src="images/IMG_9375.JPEG" />
+  <img class="slide" src="images/IMG_9376.JPEG" />
+  <img class="slide" src="images/Resized_20250607_153750.JPEG" />
+</div>
+
+<script>
+const weddingDate = new Date("October 17, 2026 17:00:00").getTime();
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = weddingDate - now;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  document.getElementById("countdown").innerHTML = days + " days to go";
+}, 1000);
+</script>
+
+</body>
+</html>
