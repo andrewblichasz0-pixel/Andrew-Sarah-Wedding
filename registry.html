@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registry - Andrew & Sarah</title>
-<!-- Lora font -->
+<title>Gift Registry - Andrew & Sarah</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 <style>
 body {
@@ -14,7 +13,6 @@ body {
   color: #4a3f3f;
 }
 
-/* UPDATED HEADER */
 header{
   position:sticky;
   top:0;
@@ -24,7 +22,6 @@ header{
   border-bottom:1px solid #eee;
 }
 
-/* dropdown button */
 .menu-btn{
   background:#b76e79;
   color:white;
@@ -35,13 +32,11 @@ header{
   border-radius:6px;
 }
 
-/* dropdown container */
 .dropdown{
   position:relative;
   display:inline-block;
 }
 
-/* dropdown content */
 .dropdown-content{
   display:none;
   position:absolute;
@@ -66,13 +61,12 @@ header{
   background:#f8eeee;
 }
 
-/* show dropdown */
 .show{
   display:block;
 }
 
 section {
-  max-width: 600px;
+  max-width: 800px;
   margin: 60px auto;
   padding: 20px;
   text-align: center;
@@ -91,13 +85,26 @@ p {
   margin-bottom: 12px;
 }
 
-a {
-  color: #b76e79;
-  text-decoration: none;
-  font-weight: bold;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-a:hover {
+ul li {
+  background: #fff4f2;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+a.gift-link {
+  color: #b76e79;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a.gift-link:hover {
   color: #9e5d66;
 }
 </style>
@@ -120,9 +127,15 @@ a:hover {
 </header>
 
 <section>
-  <h1>Registry</h1>
-  <h2>Gifts & Wishes</h2>
-  <p>You can find our wedding registry <a href="#">here</a>.</p>
+  <h1>Gift Registry</h1>
+  <h2>Our Wedding Gifts</h2>
+  <p>We have a few stores where we’ve registered items. You can view or purchase gifts by clicking below:</p>
+
+  <ul>
+    <li><a class="gift-link" href="https://www.example.com/store1" target="_blank">Store 1 Registry</a></li>
+    <li><a class="gift-link" href="https://www.example.com/store2" target="_blank">Store 2 Registry</a></li>
+    <li><a class="gift-link" href="https://www.example.com/store3" target="_blank">Store 3 Registry</a></li>
+  </ul>
 </section>
 
 <script>
