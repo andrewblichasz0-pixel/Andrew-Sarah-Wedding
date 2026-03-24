@@ -16,29 +16,66 @@ h1{
   font-size:3rem;
   margin-bottom:10px;
 }
+
+/* UPDATED HEADER */
 header{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  padding:20px;
-  background:white;
-  border-bottom:1px solid #eee;
   position:sticky;
   top:0;
   z-index:10;
+  background:white;
+  padding:10px;
+  border-bottom:1px solid #eee;
 }
-header a{
+
+/* dropdown button */
+.menu-btn{
+  background:#b76e79;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  font-size:16px;
+  cursor:pointer;
+  border-radius:6px;
+}
+
+/* dropdown content */
+.dropdown{
+  position:relative;
+  display:inline-block;
+}
+
+.dropdown-content{
+  display:none;
+  position:absolute;
+  top:45px;
+  left:0;
+  background:white;
+  min-width:160px;
+  box-shadow:0 8px 16px rgba(0,0,0,0.1);
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.dropdown-content a{
+  display:block;
+  padding:10px;
   text-decoration:none;
   color:#b76e79;
   font-weight:bold;
-  transition:0.3s;
 }
-header a:hover{
-  color:#9e5d66;
+
+.dropdown-content a:hover{
+  background:#f8eeee;
 }
+
+/* show dropdown */
+.show{
+  display:block;
+}
+
 .hero{
   text-align:center;
-  padding:20px 20px 17px; /* moved up 4px from 33px */
+  padding:20px 20px 17px;
 }
 .hero p{
   color:#7a6a6a;
@@ -52,7 +89,7 @@ header a:hover{
 }
 .slideshow{
   max-width:1100px;
-  margin:28px auto 0; /* keeps it centered and nudged up */
+  margin:28px auto 0;
   position:relative;
 }
 .slide{
@@ -90,14 +127,20 @@ header a:hover{
 </style>
 </head>
 <body>
+
 <header>
-  <a href="index.html">Home</a>
-  <a href="ourstory.html">Our Story</a>
-  <a href="rsvp.html">RSVP</a>
-  <a href="hotel.html">Hotel Block</a>
-  <a href="schedule.html">Schedule</a>
-  <a href="registry.html">Registry</a>
-  <a href="info.html">Info</a>
+  <div class="dropdown">
+    <button class="menu-btn" onclick="toggleMenu()">Menu ☰</button>
+    <div id="menu" class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="ourstory.html">Our Story</a>
+      <a href="rsvp.html">RSVP</a>
+      <a href="hotel.html">Hotel Block</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="registry.html">Registry</a>
+      <a href="info.html">Info</a>
+    </div>
+  </div>
 </header>
 
 <div class="hero">
@@ -123,6 +166,10 @@ header a:hover{
 </div>
 
 <script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+
 const weddingDate = new Date("October 17, 2026 17:00:00").getTime();
 setInterval(() => {
   const now = new Date().getTime();
